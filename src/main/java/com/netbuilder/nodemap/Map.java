@@ -1,5 +1,6 @@
 package com.netbuilder.nodemap;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -8,9 +9,11 @@ import java.util.List;
  * @author JustinMabbutt
  *
  */
-public class Map<map extends Node>
+public class Map<map extends Node> implements Serializable
 {
-    protected static boolean CANMOVEDIAGONALY = true;
+	private static final long serialVersionUID = -593074329448012420L;
+
+	protected static boolean CANMOVEDIAGONALY = true;
 
     private map[][] nodes;
 

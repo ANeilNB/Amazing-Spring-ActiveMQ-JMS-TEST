@@ -33,5 +33,9 @@ public class Test implements Serializable
 	    }
 	    path = warehouseMap.findPath(0, 0, 10, 10);
 	    //send the path
+	    
+	    for(GladosNode gN: path){
+	    	System.out.println(gN.toString());
+	    }
 	}
 }

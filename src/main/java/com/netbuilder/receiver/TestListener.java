@@ -1,17 +1,15 @@
 package com.netbuilder.receiver;
 
 import java.util.LinkedList;
+import java.util.List;
 
 import javax.jms.JMSException;
 import javax.jms.Message;
 import javax.jms.MessageListener;
 import javax.jms.ObjectMessage;
-import javax.jms.Session;
 import javax.jms.TextMessage;
 
-import org.springframework.jms.listener.SessionAwareMessageListener;
-
-import com.netbuilder.nodemap.GladosNode;
+import com.netbuilder.nodemap.*;
 
 @SuppressWarnings("rawtypes")
 public class TestListener implements MessageListener {
@@ -34,9 +32,11 @@ public class TestListener implements MessageListener {
 			try {
 				payload = ((ObjectMessage) message).getObject();
 				
-				if(payload instanceof LinkedList<?>){
-					LinkedList<GladosNode> path = (LinkedList<GladosNode>) payload;
-					System.out.println(path.getFirst().toString());
+				if(payload instanceof List<?>){
+					List<GladosNode> path = (List<GladosNode>) payload;
+					for(GladosNode gN: path){
+						System.out.println(gN.toString());
+					}
 				}
 				
 			} catch (JMSException e) {

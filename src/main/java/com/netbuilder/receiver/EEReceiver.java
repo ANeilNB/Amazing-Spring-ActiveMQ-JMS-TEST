@@ -21,7 +21,7 @@ public class EEReceiver {
 			
 			Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 			
-			Destination destination = session.createQueue("test-queue");
+			Destination destination = session.createQueue("test-queue2");
 			
 			MessageConsumer consumer = session.createConsumer(destination);
 			consumer.setMessageListener(new TestListener());

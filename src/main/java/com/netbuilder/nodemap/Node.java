@@ -1,13 +1,18 @@
 package com.netbuilder.nodemap;
 
+import java.io.Serializable;
+
 /**
  * 
  * @author JustinMabbutt
  *
  */
-public abstract class Node 
+public abstract class Node implements Serializable
 {
-    protected static final int BASICMOVEMENTCOST = 10;
+
+	private static final long serialVersionUID = -1413165612512892037L;
+	
+	protected static final int BASICMOVEMENTCOST = 10;
     protected static final int DIAGONALMOVEMENTCOST = 14;
 
     private int xPosition;
