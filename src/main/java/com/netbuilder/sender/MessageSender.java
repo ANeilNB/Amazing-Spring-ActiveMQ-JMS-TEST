@@ -2,6 +2,11 @@ package com.netbuilder.sender;
 
 import org.springframework.jms.core.JmsTemplate;
 
+/**
+ * 
+ * @author Alexander Neil
+ *
+ */
 public class MessageSender {
 
 	private JmsTemplate jmsTemplate;

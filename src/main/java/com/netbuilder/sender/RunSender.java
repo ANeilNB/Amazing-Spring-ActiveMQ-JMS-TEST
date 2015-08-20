@@ -9,7 +9,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.netbuilder.nodemap.Test;
 
-
+/**
+ * 
+ * @author Alexander Neil
+ *
+ */
 public class RunSender {
 
 	
@@ -24,5 +28,6 @@ public class RunSender {
 		
 		messageSender.send("test-queue", message);
 
+		
 	}
 }

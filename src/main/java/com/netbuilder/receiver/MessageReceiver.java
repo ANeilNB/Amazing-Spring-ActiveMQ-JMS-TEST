@@ -2,6 +2,11 @@ package com.netbuilder.receiver;
 
 import org.springframework.jms.core.JmsTemplate;
 
+/**
+ * 
+ * @author Alexander Neil
+ *
+ */
 public class MessageReceiver {
 	
 	private JmsTemplate jmsTemplate;

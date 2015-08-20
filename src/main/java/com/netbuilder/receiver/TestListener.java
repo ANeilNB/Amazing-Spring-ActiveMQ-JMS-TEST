@@ -1,6 +1,5 @@
 package com.netbuilder.receiver;
 
-import java.util.LinkedList;
 import java.util.List;
 
 import javax.jms.JMSException;
@@ -11,7 +10,11 @@ import javax.jms.TextMessage;
 
 import com.netbuilder.nodemap.*;
 
-@SuppressWarnings("rawtypes")
+/**
+ * 
+ * @author Alexander Neil
+ *
+ */
 public class TestListener implements MessageListener {
 
 	@Override
@@ -33,6 +36,7 @@ public class TestListener implements MessageListener {
 				payload = ((ObjectMessage) message).getObject();
 				
 				if(payload instanceof List<?>){
+					@SuppressWarnings("unchecked")
 					List<GladosNode> path = (List<GladosNode>) payload;
 					for(GladosNode gN: path){
 						System.out.println(gN.toString());
