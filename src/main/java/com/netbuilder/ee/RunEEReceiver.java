@@ -1,4 +1,5 @@
-package com.netbuilder.receiver;
+package com.netbuilder.ee;
+
 
 public class RunEEReceiver {
 

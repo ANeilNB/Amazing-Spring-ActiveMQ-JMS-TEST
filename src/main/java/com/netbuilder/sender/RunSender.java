@@ -18,8 +18,9 @@ public class RunSender {
 		ApplicationContext context = new ClassPathXmlApplicationContext("sendercontext.xml");
 		MessageSender messageSender = (MessageSender) context.getBean("messageSender");
 		
-		Test testMaker = new Test();
-		Serializable message = (LinkedList)testMaker.getPath();
+		//Test testMaker = new Test();
+		//Serializable message = (LinkedList)testMaker.getPath();
+		String message = "Hello";
 		
 		messageSender.send("test-queue", message);
 

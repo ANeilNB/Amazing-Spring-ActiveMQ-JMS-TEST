@@ -1,4 +1,4 @@
-package com.netbuilder.receiver;
+package com.netbuilder.ee;
 
 import javax.jms.Connection;
 import javax.jms.Destination;
@@ -7,6 +7,8 @@ import javax.jms.MessageConsumer;
 import javax.jms.Session;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
+
+import com.netbuilder.receiver.TestListener;
 
 public class EEReceiver {
 

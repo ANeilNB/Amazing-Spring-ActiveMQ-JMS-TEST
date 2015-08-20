@@ -1,4 +1,4 @@
-package com.netbuilder.sender;
+package com.netbuilder.ee;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
